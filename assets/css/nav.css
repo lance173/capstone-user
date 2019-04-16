@@ -1,0 +1,574 @@
+@import url(https://fonts.googleapis.com/css?family=Raleway);
+body {
+  margin: 0px;
+}
+nav {
+
+
+}
+/*login*/ 
+.admin-loginbg {
+    background-image: url("../img/usc-jb-lrc2.jpg")!important;
+    height: 100% !important;
+    width: 100% !important;
+    background-position: center !important;
+    background-repeat: no-repeat !important;
+    background-size: cover !important;
+    background-attachment: fixed !important;
+    margin:0 !important;
+    overflow: hidden !important;
+ }
+
+ .loginbox{
+  background-color: rgba(255,255,255,0.3) !important;
+  text-align: center !important;
+  border-radius: 5px !important;
+  width: 80% !important;
+  margin-left: 45px !important;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19) !important;
+}
+
+
+#login {
+    padding-top: 50px !important;
+    padding-bottom: 40px !important;
+}
+
+#login .form-signin {
+    max-width: 500px !important;
+    padding: 19px 50px 29px;
+    margin: 0 auto 20px !important;    
+}
+
+#login .form-signin input[type="text"],
+#login .form-signin input[type="password"] {
+    width: 100% !important;
+    font-size: 14px !important;
+    height: auto !important;
+    margin-bottom: 15px !important;
+    padding: 10px 9px !important;
+    border-radius: 5px !important;
+}
+#login .form-signin button{
+  width: 40% !important;
+  padding: 12px 9px !important;
+  border-radius: 5px !important;
+}
+
+.login-uscliblogo {
+    height: 70px !important;
+    width: 130px !important;
+    margin-bottom: 15px !important;
+}
+
+.login-usclogo {
+    height: 30px !important;
+    width: 100px !important;
+    margin-top: 10px !important;
+    margin-bottom: : 50px !important;
+}
+
+.login-useravatar{
+  height: 85px !important;
+  width: 85px !important;
+}
+
+.loginheading {
+  font-family: Roboto !important;
+  color: #FFF !important;
+  text-align: center !important;
+  padding-top: 10px !important;
+  margin-bottom: 10px !important;
+}
+
+.loginheading h1{
+  font-size: 30px !important;
+}
+
+.loginheading hr {
+  width: 90% !important;
+  border-top: 1px solid #02A554 !important;
+}
+
+.loginfooter {
+  font-family: Roboto !important;
+  color: #dbdbdb !important;
+  text-align: center !important;
+  font-size: 11px !important;
+  margin-top: 40px !important;
+}
+
+
+.btn-login {
+    color: #fff !important;
+    background-color: #02A554 !important;
+    border-color: #02A554 !important; 
+    font-family: Roboto !important;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19) !important;
+}
+
+.btn-login:focus, .btn-login.focus, .btn-login:hover, .btn-login.active, .btn-login:active, .btn-login:disabled, .btn-login.disabled 
+  {
+    color: #fff !important;
+    background-color: #29b765 !important;
+    border-color: #229854 !important;
+    -webkit-box-shadow: none !important;
+    background-image: none !important; 
+  }
+
+@media screen and (max-width: 400px) {
+  .loginbox{
+    margin-left: 35px !important;
+  }
+  #login .form-signin input[type="text"],
+  #login .form-signin input[type="password"] {
+    font-size: 12px !important;
+  }
+}
+/*login*/
+
+
+
+
+
+
+
+.navbar{
+  background-color: #02A554 !important;
+
+  text-align: left !important;
+  font-family: arial;
+  width: 100% !important;
+  font-size: 100% !important;     
+}
+
+.no-padding-nav{
+  padding-top: 0 !important;
+  padding-bottom: 0 !important;
+}
+
+.nav-item{
+  color: #ffff !important; 
+  transition: 0.4s !important; 
+  padding: 8.5px 10px !important; 
+  margin: 0 10px !important; 
+}
+
+.nav-item:hover {
+  background-color: #FFB041 !important; 
+  color: #ffffff !important; 
+ /* padding: 1px 10px;*/
+}
+
+.nav-item:focus {
+  background-color: #FFB041 !important; 
+  color: #ffffff !important; 
+}
+.nav-link{
+  color: #ffff !important; 
+}
+.link-right{
+  margin-left: 500px !important;
+}
+/*Dropdown*/
+.collapse{
+  background-color: #02A554 !important; 
+  color: #000 !important;
+}
+
+.pad-left-home{
+  padding-left: 60px;
+
+}
+
+.pad-right-login{
+  padding-right: 60px;
+}
+
+.navbar-toggler{
+  background-color: #ffff !important; 
+  color: #ffff !important;
+  z-index: 1000 !important;
+}
+.navbar-toggler-icon{
+  background-color: #ffff !important; 
+  color: #ffff !important;
+}
+
+.navbar.navbar-top {
+  padding-top: 20px;
+  padding-bottom: 20px;
+  margin-bottom: 0;
+  border-radius: 0;
+}
+.navbar.navbar-bottom {
+  border-radius: 0;
+}
+.navbar.navbar-bottom a {
+  margin: 0 5px;
+}
+.navbar-top .navbar-brand {
+  padding-top: 0;
+  margin-top: -12px;
+}
+
+.backgroundLight{
+  background-color: #f1f1f1 !important;
+  padding-top: 0px !important;
+  padding-bottom: 0px !important;
+  padding-left: 0px !important;
+  padding-right: 0px !important;
+}
+
+.bottom {
+  position: relative;
+  margin-top: -150px; /* negative value of footer height */
+  height: 150px;
+  clear:both;
+  padding-top:20px;
+} 
+
+.image-resize{
+  height: 200px;
+  max-width: 100%;
+  object-fit: cover;
+}
+
+.resize{
+  height: 100px;
+  width: 100px;
+  object-fit: cover;
+}
+
+.jumboheaderimg
+{
+  background-image: url("../assets/img/facility2.jpg") !important;
+  background-size: cover !important;
+
+}
+
+.bar {
+  height: 4em;
+  padding-top: 2em;
+  opacity: 0.5;
+  background: black;
+  border-top: 3px solid #ccc;
+  border-bottom: 3px solid #ccc;
+  margin-top: 5.0em;
+}
+h2.ontop {
+  position: relative;
+  top: 4.7em;
+}
+.cover{
+  background-size: cover;
+}
+
+.column {
+  float: left;
+  width: 33.3%;
+  margin-bottom: 16px;
+  padding: 0 8px;
+}
+
+@media screen and (max-width: 650px) {
+  .column {
+    width: 100%;
+    display: block;
+  }
+}
+
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+
+.container {
+  padding: 0 16px;
+}
+
+.container::after, .row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+.title {
+  color: grey;
+}
+
+.button {
+  border: none;
+  outline: 0;
+  display: inline-block;
+  padding: 8px;
+  color: white;
+  background-color: #000;
+  text-align: center;
+  cursor: pointer;
+  width: 100%;
+}
+
+.button:hover {
+  background-color: #555;
+}
+
+
+
+
+
+@media (max-width: 767px) {
+  .navbar .navbar-collapse {
+    margin-top: 20px;
+    margin-bottom: -20px;
+  }
+}
+
+
+.text-block {
+    position: absolute;
+    bottom: 148px;
+    right: 70px;
+    background-color: rgba(0,0,0,0.6);
+    color: white;
+    padding-left: 20px;
+    padding-right: 20px;
+    width: 781px;
+    height: 370px;
+    
+}
+
+.usc-lib{
+    text-align: center;
+    vertical-align: middle;
+    font-size: 40px;
+}
+
+
+.slidecover{
+ background-color: rgba(0,0,0,0.8);
+ position: absolute;
+ height: 100%;
+ width: 100%; 
+ color: #FFF;
+ bottom: 0px;
+ z-index: 50;
+ transition: .4s;
+}
+
+.slidecover:hover{
+  opacity: 0;
+  transition: .4s;
+}
+
+h1.coverslide{
+   font-size: 55px;
+   font-style:italic;
+}
+
+.coverquote{
+  margin-top: 200px;
+}
+.coverquoteimg{
+ height: 100px;
+  width: 100px;;
+}
+
+
+
+.hovcol {
+  opacity: 0;
+  transition: .5s ease;
+}
+
+.hovcol:hover{
+  opacity: 1;
+}
+
+
+/*navbar top images*/
+.usc-logo-1-top{
+  text-align: left;
+  padding-bottom: 20px;
+  padding-top: 10px;
+  padding-left: 100px;
+}
+.usc-logo-2-top{
+  text-align: right; 
+  padding-bottom: 20px;
+  padding-top: 10px;
+  padding-right: 100px;
+}
+
+
+  /* Make the image fully responsive */
+.carousel-inner img {
+      width: 100%;
+      height: 100%;
+  }
+
+.carousel-item {
+  height: 100vh;
+  min-height: 300px;
+  background: no-repeat center center scroll;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+.body-container {
+    position: relative;
+    overflow: hidden;
+    padding-top: 0;
+}
+
+.responsive-container {
+    position: relative;
+    overflow: hidden;
+    padding-top: 56.25%;
+}
+
+.resp-iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
+}
+
+
+.libraryCarousel{
+  height: 40vh;
+  min-height: 300px;
+  background: no-repeat center center scroll;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+.row.heading h2 {
+    color: #fff;
+    font-size: 52.52px;
+    line-height: 95px;
+    font-weight: 400;
+    text-align: center;
+    margin: 0 0 40px;
+    padding-bottom: 20px;
+    text-transform: uppercase;
+}
+ul{
+  margin:0;
+  padding:0;
+  list-style:none;
+}
+.heading.heading-icon {
+    display: block;
+}
+.padding-lg {
+  display: block;
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+.practice-area.padding-lg {
+    padding-bottom: 55px;
+    padding-top: 55px;
+}
+.practice-area .inner{ 
+     border:1px solid #999999; 
+   text-align:center; 
+   margin-bottom:28px; 
+   padding:40px 25px;
+}
+.practice-area .inner h3{ 
+    color:#3c3c3c; 
+  font-size:24px; 
+  font-weight:500;
+  font-family: 'Poppins', sans-serif;
+  padding: 10px 0;
+}
+.practice-area .inner p{ 
+    font-size:14px; 
+  line-height:22px; 
+  font-weight:400;
+}
+.practice-area .inner img{
+  display:inline-block;
+}
+
+
+.our-webcoderskull{
+  background: #fff;
+  
+}
+.our-webcoderskull .cnt-block{ 
+   float:left; 
+   width:100%; 
+   background:#fff; 
+   padding:30px 20px; 
+   text-align:center;
+   margin: 0 0 28px;
+}
+.our-webcoderskull .cnt-block figure{
+   width:148px; 
+   height:148px; 
+   border-radius:100%; 
+   display:inline-block;
+   margin-bottom: 15px;
+}
+.our-webcoderskull .cnt-block img{ 
+   width:148px; 
+   height:148px; 
+   border-radius:100%; 
+}
+.our-webcoderskull .cnt-block h3{ 
+   color:#2a2a2a; 
+   font-size:20px; 
+   font-weight:500; 
+   padding:6px 0;
+   text-transform:uppercase;
+}
+.our-webcoderskull .cnt-block h3 a{
+  text-decoration:none;
+  color:#2a2a2a;
+}
+.our-webcoderskull .cnt-block p{ 
+   color:#2a2a2a; 
+   font-size:13px; 
+   line-height:20px; 
+   font-weight:400;
+}
+
+.our-webcoderskull .cnt-block .follow-us li{ 
+    display:inline-block; 
+  width:auto; 
+  margin:0 5px;
+}
+.our-webcoderskull .cnt-block .follow-us li .fa{ 
+   font-size:24px; 
+   color:#767676;
+}
+
+
+
+
+
+a {
+  color: #0254EB
+}
+a:visited {
+  color: #0254EB
+}
+a.morelink {
+  text-decoration:none;
+  outline: none;
+}
+.morecontent span {
+  display: none;
+}
+.comment {
+  width: 400px;
+  background-color: #f0f0f0;
+  margin: 10px;
+}

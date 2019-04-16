@@ -1,0 +1,59 @@
+body {
+    background: #fff;
+}
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+main,
+nav,
+section {
+    display: block;
+}
+#content>.entry-header {
+    background: #f6f6f6 none repeat scroll 0 0;
+    margin-bottom: 50px;
+    padding: 30px 0 30px;
+    text-align: center;
+}
+
+.header-layout1 #content>.entry-header {
+    padding: 75px 0 25px;
+}
+
+#content>.entry-header .entry-title {
+    font-size: 24px;
+    text-align: center;
+    padding: 0;
+}
+.single-layout2 .entry-meta {
+    float: left;
+    width: 15%;
+}
+
+.single-layout2 .entry-desc {
+    float: right;
+    width: 85%;
+}
+
+.single-layout2 .post-on {
+    background: #004b8e;
+    display: inline-block;
+    color: #fff;
+    padding: 10px 15px;
+}
+
+.single-layout2 .entry-meta span {
+    color: #fff;
+    display: block;
+    text-align: center;
+    font-size: 16px;
+    font-weight: 700;
+}
+
+.single .entry-meta {
+    margin-bottom: 20px;
+}

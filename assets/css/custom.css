@@ -1,0 +1,372 @@
+/**    CUSTOM CSS     **/
+
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+@import url('https://fonts.googleapis.com/css?family=Crete+Round');
+
+html, body{
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+}
+
+/*
+ * login.php 
+ *----------------
+ */
+
+ .admin-loginbg {
+    background-image: url("../img/usc-jb-lrc2.jpg");
+    height: 100%;
+    width: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    margin:0;
+    overflow: hidden;
+ }
+
+ /*.iaunatural{
+    z-index: 2;
+    position: fixed;
+    top: 20%;
+    width: 100%;
+ }*/
+
+ .loginbox{
+  background-color: rgba(255,255,255,0.3);
+  text-align: center;
+  border-radius: 5px;
+  width: 80%;
+  margin-left: 45px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+
+#login {
+    padding-top: 50px;
+    padding-bottom: 40px;
+}
+
+#login .form-signin {
+    max-width: 500px;
+    padding: 19px 50px 29px;
+    margin: 0 auto 20px;    
+}
+
+#login .form-signin input[type="text"],
+#login .form-signin input[type="password"] {
+    width: 100%;
+    font-size: 14px;
+    height: auto;
+    margin-bottom: 15px;
+    padding: 10px 9px;
+    border-radius: 5px;
+}
+#login .form-signin button{
+  width: 40%;
+  padding: 12px 9px;
+  border-radius: 5px;
+}
+
+.login-uscliblogo {
+    height: 70px;
+    width: 130px;
+    margin-bottom: 15px;
+}
+
+.login-usclogo {
+    height: 30px;
+    width: 100px;
+    margin-top: 10px;
+    margin-bottom: : 50px;
+}
+
+.login-useravatar{
+  height: 85px;
+  width: 85px;
+}
+
+.loginheading {
+  font-family: Roboto;
+  color: #FFF;
+  text-align: center;
+  padding-top: 10px;
+  margin-bottom: 10px;
+}
+
+.loginheading h1{
+  font-size: 30px;
+}
+
+.loginheading hr {
+  width: 90%;
+  border-top: 1px solid #02A554;
+}
+
+.loginfooter {
+  font-family: Roboto;
+  color: #dbdbdb;
+  text-align: center;
+  font-size: 11px;
+  margin-top: 40px;
+}
+
+
+.btn-login {
+    color: #fff;
+    background-color: #02A554;
+    border-color: #02A554; 
+    font-family: Roboto;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.btn-login:focus, .btn-login.focus, .btn-login:hover, .btn-login.active, .btn-login:active, .btn-login:disabled, .btn-login.disabled 
+  {
+    color: #fff !important;
+    background-color: #29b765 !important;
+    border-color: #229854 !important;
+    -webkit-box-shadow: none;
+    background-image: none; 
+  }
+
+@media screen and (max-width: 400px) {
+  .loginbox{
+    margin-left: 35px;
+  }
+  #login .form-signin input[type="text"],
+  #login .form-signin input[type="password"] {
+    font-size: 12px;
+  }
+}
+
+
+/****** Style Star Rating Widget *****/
+
+.rating { 
+  border: none;
+  float: left;
+}
+
+.rating > input { display: none; } 
+.rating > label:before { 
+  margin: 5px;
+  font-size: 2.25em;
+  font-family: FontAwesome;
+  display: inline-block;
+  content: "\f005";
+}
+
+.rating > .half:before { 
+  content: "\f089";
+  position: absolute;
+}
+
+.rating > label { 
+  color: #ddd; 
+ float: right; 
+}
+
+/***** CSS Magic to Highlight Stars on Hover *****/
+
+.rating > input:checked ~ label, /* show gold star when clicked */
+.rating:not(:checked) > label:hover, /* hover current star */
+.rating:not(:checked) > label:hover ~ label { color: #FFD700;  } /* hover previous stars in list */
+
+.rating > input:checked + label:hover, /* hover current star when changing rating */
+.rating > input:checked ~ label:hover,
+.rating > label:hover ~ input:checked ~ label, /* lighten current selection */
+.rating > input:checked ~ label:hover ~ label { color: #FFED85;  } 
+
+  .img-ratvw{
+    border-radius: 100%;
+    height: 75px; 
+    width: 75px;
+  }
+
+  .ratvw-usrnam{
+    text-transform: uppercase;
+    color: #008FFF;
+  }
+
+  .star-checked {
+    color: orange;
+  }
+
+  .btn-ratvwall {
+    color: #fff;
+    background-color:   #008FFF;
+    border-color: #008FFF; 
+    border-radius: 3px;
+    padding: 10px 100px;
+  }
+
+  .btn-ratvwall:focus, .btn-ratvwall.focus, .btn-ratvwall:hover, .btn-ratvwall.active, .btn-ratvwall:active, .btn-ratvwall:disabled, .btn-ratvwall.disabled 
+  {
+    color: #fff !important;
+    background-color: #0367b5 !important;
+    border-color: #0367b5 !important;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    background-image: none; 
+  }
+
+
+/**aaaaa**/
+
+#nav {
+  width: 100%;
+  float: left;
+  margin: 0 0 1em 0;
+  padding: 0;
+  background-color: #f2f2f2;
+  border-bottom: 1px solid #ccc;  }
+#nav ul {
+  list-style: none;
+  width: 800px;
+  margin: 0 auto;
+  padding: 0; }
+#nav li {
+  float: left; }
+#nav li a {
+  display: block;
+  padding: 8px 15px;
+  text-decoration: none;
+  font-weight: bold;
+  color: #069;
+  border-right: 1px solid #ccc; }
+#nav li:first-child a {
+  border-left: 1px solid #ccc; }
+#nav li a:hover {
+  color: #c00;
+  background-color: #fff; }
+
+.container-custom {
+  width:100%;
+  padding-right:5px;
+  padding-left:5px;
+  padding-top: 10px;
+  margin-right:auto;
+  margin-left:auto
+}
+
+.container-custom2 {
+  width:100%;
+  padding-right:50px;
+  padding-left:50px;
+  padding-top: 10px;
+  margin-right:auto;
+  margin-left:auto
+}
+.home-mid-usclibsyst{
+  margin-top: 50px; 
+  text-align: center;
+  margin-bottom: 25px;
+}
+
+.home-mid-usclibsyst h1{
+  font-family: Crete Round, serif; 
+  color: #02A554; 
+  font-size: 45px;
+}
+
+.home-gatewayusclibsyst{
+  color: #333; 
+  width: 25%;  
+  font-family: Roboto, sans-serif; 
+  font-size: 15px;
+}
+
+.home-titles1{
+  color:#02A554;
+}
+
+.orangelines1{
+  border: 1px solid #FFB041; 
+  float: left; 
+  display: block; 
+}
+
+.orangelines2{
+  border: 1px solid #FFB041; 
+  float: center; 
+  display: block; 
+}
+
+
+/** Hours of Service **/
+.campus-sched{
+  margin-top: 50px;
+}
+
+.hrsofsrvc-campus{
+  color: #02A554;
+  font-weight: bold;
+}
+
+.library-facilityandtime{
+  margin-top: 40px;
+  font-size: 13px;
+}
+
+.library-area{
+  margin-top: 20px;
+  font-weight: bold;
+}
+
+.library-area-time{
+  display: block;
+  font-size: 12px;
+}
+
+.hrsofsrvccampus-selector{
+  margin-top: 50px;  
+  text-align: center;
+  margin-bottom: 100px;
+}
+
+.aboutlibraries{
+    position: relative;
+    display: inline-block; /* Make the width of box same as image */
+}
+.aboutlibraries .aboutlibraries-text{
+    position: absolute;
+    z-index: 999;
+    margin: 0 auto;
+    left: 0;
+    right: 0;
+    top: 70%; /* Adjust this value to move the positioned div up and down */
+    text-align: center;
+    width: 70%; /* Set the width of the positioned div */
+    color: #333;
+    padding: 20px;
+    background-color: #FFF;
+}
+
+@media screen and (max-width: 500px) {
+    .aboutlibraries .aboutlibraries-text{
+        width: 90%;
+        top: 60%;
+        font-size: 15px;
+    }
+}
+
+.home-virtualtour{
+    background-image: url("../img/Librariesss.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin:0;
+    margin-bottom: 30px;
+    overflow: hidden;
+    height: 100%;
+
+    padding: 0;
+    border-radius: 10px;
+    border: 0px solid;
+}
+
+.home-virtualtour h3{
+    
+}
