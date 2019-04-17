@@ -368,11 +368,79 @@ html, body{
     font-family: Roboto;
 }
 
-.home-virtualtour h4{
+.home-virtualtour h3{
     font-style: italic;
 }
 
-.home-virtualtour h1{
+.threesixty-degrees{
+    margin-top: 0;
+    padding-left: 35px;
+}
+
+.threesixty{
     font-size: 150px;
-    padding-left: 30px;
+}
+
+.degrees{
+    font-size: 100px;
+}
+
+.start-tour {
+    overflow: hidden;
+    text-align: center;
+}
+.start-tour:before,
+.start-tour:after {
+    background-color: #FFF;
+    content: "";
+    display: inline-block;
+    height: 2px;
+    position: relative;
+    vertical-align: middle;
+    width: 20%;
+}
+.start-tour:before {
+    right: 0.5em;
+    margin-left: -50%;
+}
+.start-tour:after {
+    left: 0.5em;
+    margin-right: -50%;
+}
+
+.btn-starttour{
+    color: #FFF;
+    background-color: rgba(0,0,0,0);
+    border: 1px solid #FFF;
+    padding: 20px 50px;
+    font-size: 20px;
+    font-style: italic;
+}
+
+.btn-starttour:hover {
+    background-color: #FFB041;
+    border:1px solid #FFB041;
+    font-size: 25px;
+    font-weight: bold;
+    
+}
+
+footer {
+    margin-top: 100px;
+    background-color: #333;
+    color: #fff;
+}
+
+.foot-title1{
+    text-align: center; 
+    padding-top: 20px;
+    padding-bottom: 10px;
+}
+
+.foot-sociallink-fb, .foot-sociallink-fb:active{
+    color: #FFF;
+}
+
+.foot-sociallink-fb:hover {
+    color: #02A554;
 }

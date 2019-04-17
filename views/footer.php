@@ -1,7 +1,9 @@
 
-  <footer >
-    
-  </footer>
+      <footer>
+            <div class="foot-title1"> <b>USC LIBRARY SYSTEM WEBSITE 2.0</b> - All rights reserved © 2019. </div>
+            <center> <a href="https://www.facebook.com/usclibrarysystem/" class="foot-sociallink-fb" > <i class="fab fa-facebook"></i> <div style="padding-bottom: 15px; font-size: 10px; display: inline-block;"> Univesity of San Carlos Library System </div> </a>  </center>
+            
+      </footer>
 
 
 

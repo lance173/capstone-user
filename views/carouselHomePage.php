@@ -232,11 +232,14 @@ $article =loadArticles();
 	<div class="row">
 		<div class="jumbotron home-virtualtour" style="width:100%">
 			<div style="background-color: rgba(0,0,0,0.7);">
-				<div style="text-align: center; padding: 300px; color: #FFF; font-family: ">
-					<h4>UNIVERSITY OF SAN CARLOS LIBRARIES</h4>
-					<h1>360</h1><div style="display: inline-block;">°</div>
-					<h3>VIRTUAL TOUR</h3>
-					<button class="btn btn-primary">START TOUR</button>
+				<div style="text-align: center; padding: 150px; color: #FFF;">
+					<h3>UNIVERSITY OF SAN CARLOS LIBRARIES</h3>
+					<div class="threesixty-degrees"><span class="threesixty">360</span><span class="degrees">°</span></div>
+					<h2>VIRTUAL TOUR</h2>
+						<div style="margin-top: 30px;">
+							<h2 class="start-tour"> <button class="btn btn-starttour">START TOUR</button> </h2>
+						</div>
+						
 				</div>				
 			</div>			
 		</div>
