@@ -1,6 +1,7 @@
 <?php 
 	require('../controllers/SliderController.php'); 
 
+	$visitor = visitCounter();
 	$slide = loadSliderItems();
 ?>
 <header>
@@ -56,7 +57,7 @@
 </div>
 
 
-<?php require('../controllers/displayArticle.php');
+<?php require('../controllers/Article&CommentController.php');
 
 $article =loadArticles();
 

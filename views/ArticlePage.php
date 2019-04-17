@@ -15,26 +15,25 @@ $row = displayArticle($id);
 ?>
 
 <!-- Page Content -->
-<div class="container">
+<div class="container" style="margin-top: 50px;">
   <div class="row">
     <!-- Post Content Column -->
     <div class="col-lg-8">
       <!-- Title -->
-      <h1 class="mt-4"><?php echo $row[1];?></h1>
+      <h1 class="mt-4"><?php echo $row['Title'];?></h1>
       <!-- Author -->
       <p class="lead">
-        by
-        <a href="#"><?php echo $row[7];?></a>
+        by <?php echo $row['FirstName']; echo' '; echo $row['LastName'];?>
       </p>
       <hr>
       <!-- Date/Time -->
-      <p>Posted on <?php $dateCreat=date_create($row[5]); echo date_format($dateCreat,"F d, Y"); ?></p>
+      <p>Posted on <?php $dateCreat=date_create($row['DatePublished']); echo date_format($dateCreat,"F d, Y"); ?></p>
       <hr>
       <!-- Preview Image -->
-      <img class="img-fluid rounded" src=../../capstone-admin<?php echo $row[2]?> alt="">
+      <img class="img-fluid rounded" src=../../capstone-admin<?php echo $row['FeaturePhoto']?> alt="" style="width: 100%; height: 500px;">
       <hr>
       <!-- Post Content -->
-      <p class="lead"><?php echo $row[3];?></p>
+      <p class="lead"><?php echo $row['Content'];?></p>
                 
 
       <hr>
@@ -106,21 +105,20 @@ $row = displayArticle($id);
     <!-- Sidebar Widgets Column -->
     <div class="col-md-4">
       <!-- Search Widget -->
-      <!-- <a href=viewArticle.php?id=<?php echo $a['ArticleID'];?>>Read More</a> -->
+     
       <div class="card my-4">
         <h5 class="card-header">More Articles</h5>
         <div class="card-body">
-          <div style="max-width: 350px; height: 52vh;">
+          <div style="max-width: 350px; height: 770px;">
             <div style="height: 100%; overflow: auto;">
               <?php foreach($articles as $a){   ?>
-              <div class="row no-gutters border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+              <div class="row no-gutters border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative" onclick="clickArticle('<?php echo $a['ArticleID']?>')">
                 <div class="col p-4 d-flex flex-column position-static">
-                  <strong class="d-inline-block mb-2 text-primary">World</strong>
                   <h3 class="mb-0"><?php echo $a['Title'];?></h3>
-                  <img class="img-fluid rounded image-resize" src="../../capstone-admin<?php echo $a['FeaturePhoto'];?>" alt="">
+                  <img class="img-fluid rounded image-resize" src="../../capstone-admin<?php echo $a['FeaturePhoto'];?>" alt="" style="margin-top: 20px;">
                   <div class="mb-1 text-muted"><?php $dateCreat=date_create($a['DatePublished']); echo date_format($dateCreat,"F d, Y"); ?></div>
                   <p class="card-text mb-auto"><?php echo substr($a['Content'], 0, 280);?>...</p>
-                  <a href=../views/ArticlePage.php?id=<?php echo $a['ArticleID']?>>Read More</a>
+                  <a href="../views/ArticlePage.php?id=<?php echo $a['ArticleID']?>">Read More</a>
                 </div>
               </div>
             <?php } ?> 

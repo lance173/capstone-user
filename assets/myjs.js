@@ -32,6 +32,10 @@ $(document).ready(function() {
 	});
 });
 
+function clickArticle(ArticleID){
+	window.location='ArticlePage.php?id='+ArticleID;
+}
+
 
 function reportComment(CommentID){
 	$.ajax({

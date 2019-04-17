@@ -1,4 +1,4 @@
-<?php require('MysqlConnect.php');
+<?php require_once('MysqlConnect.php');
 
 if(isset($_POST['btnSubmit'])){
       addComment();
@@ -10,16 +10,17 @@ if(isset($_POST['btnReportSubmit'])){
 
 function displayArticle($id){
       $conn = myConnect();
-  $sql = "SELECT * FROM articles WHERE ArticleID = '$id'";
+  $sql = "SELECT articles.ArticleID, articles.Title, articles.FeaturePhoto, articles.Content, articles.DatePublished, articles.Status, articles.AdminID, admins.AdminID, admins.FirstName, admins.LastName FROM 
+   articles INNER JOIN admins on articles.AdminID = admins.AdminID WHERE ArticleID = '$id' LIMIT 1 ";
       $result = mysqli_query($conn, $sql) or die("error");
-      $row = mysqli_fetch_row($result);
+      $row = mysqli_fetch_assoc($result);
       return $row;
 
 }
 
 function loadArticles(){
    $conn = myConnect();
-   $sql = "SELECT * FROM articles WHERE Status = 'PUBLISHED' ORDER BY ArticleID DESC";
+   $sql = "SELECT * FROM articles WHERE Status = 'PUBLISHED' ORDER BY ArticleID DESC LIMIT 4";
    $result = mysqli_query($conn, $sql);
 
    while($row=mysqli_fetch_array($result)){
