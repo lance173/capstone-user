@@ -224,30 +224,20 @@ $article =loadArticles();
 						
 				</div>			
 			</div>
-		</div><!-- /.row -->		
+		</div><!-- /.row -->	
+	</main>
+</div>
+
 	
 	<div class="row">
-		<div class="jumbotron home-virtualtour">
-			<div style="text-align: center; padding: 500px;">
-				<h4>Univesity of San Carlos</h4>
-				<h1>360°</h1>
-				<h3>Virtual Tour</h3>
-				<button class="btn btn-primary" type="submit" data-toggle="modal" data-target="#myModal">Rate</button>
-
-		<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-            <div class="modal-dialog" role="document" style="width:100%; ">
-              <div class="modal-content" style="background-color: white;">
-                <div class="modal-header">
-                  <button type="button" data-dismiss="modal" aria-label="Close"><i class="fas fa-times"></i></button>
-                </div>
-                <div class="modal-body">
-                  <?php 
-                    include 'ratingForm.php';                 
-                  ?>
-                </div>
-              </div>
-            </div>
-          </div>
+		<div class="jumbotron home-virtualtour" style="width:100%">
+			<div style="background-color: rgba(0,0,0,0.7);">
+				<div style="text-align: center; padding: 300px; color: #FFF; font-family: ">
+					<h4>UNIVERSITY OF SAN CARLOS LIBRARIES</h4>
+					<h1>360</h1><div style="display: inline-block;">°</div>
+					<h3>VIRTUAL TOUR</h3>
+					<button class="btn btn-primary">START TOUR</button>
+				</div>				
 			</div>			
 		</div>
 	</div>
