@@ -237,7 +237,7 @@ $article =loadArticles();
 					<div class="threesixty-degrees"><span class="threesixty">360</span><span class="degrees">°</span></div>
 					<h2>VIRTUAL TOUR</h2>
 						<div style="margin-top: 30px;">
-							<h2 class="start-tour"> <button class="btn btn-starttour">START TOUR</button> </h2>
+							<h2 class="start-tour"> <button class="btn btn-starttour" onclick="window.location='startvirtualtour.php'">START TOUR</button> </h2>
 						</div>
 						
 				</div>				

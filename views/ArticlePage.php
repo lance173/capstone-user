@@ -63,7 +63,7 @@ $row = displayArticle($id);
       <div class="media mb-4">
         <img class="d-flex mr-3 rounded-circle resize" src="../assets/img/user-3.jpg" alt="">
         <div class="media-body">
-          <h5 class="mt-0"><?php echo $c['FirstName'];?></h5>
+          <h5 class="mt-0"><?php echo $c['FirstName']; echo ' '; echo $c['LastName'];?></h5>
           <?php echo $c['Content'];?>
           <p>
               
@@ -71,7 +71,8 @@ $row = displayArticle($id);
               <input type="text" name="commentID" value="<?php echo $c['CommentID'];?>" hidden/>
               <input type="text" name="userID" value="<?php echo $c['FirstName'];?>" hidden/>
               <input type="text" name="reporterID" value="<?php echo $_SESSION['profile']['FirstName'];?>" hidden/>
-            <button class="btn btn-sm btn-default" type="submit" data-toggle="modal" data-target="#myModal" onclick="reportComment('<?php echo $c['CommentID']?>')"> Report </button>
+              Re
+              <button class="btn btn-sm btn-default" type="submit" data-toggle="modal" data-target="#myModal" onclick="reportComment('<?php echo $c['CommentID']?>')"> Report </button>
           </p>
 
           <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">

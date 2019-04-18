@@ -425,6 +425,28 @@ html, body{
     
 }
 
+.librarytour-thumbnail{
+    height: 300px;
+    width: 500px;
+}
+
+.virtualtour-text-bg{
+    background-color: rgba(0,0,0,0.7);
+}
+
+.virtualtour-text{
+    padding: 130px 0px; 
+    text-align: center; 
+    font-weight: bold; 
+    font-size: 17px; 
+    color: #FFF;
+    transition: 0.1s;
+}
+
+.virtualtour-text:hover {
+    font-size: 19px;     
+}
+
 footer {
     margin-top: 100px;
     background-color: #333;
@@ -444,3 +466,4 @@ footer {
 .foot-sociallink-fb:hover {
     color: #02A554;
 }
+

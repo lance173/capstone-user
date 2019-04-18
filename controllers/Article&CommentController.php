@@ -72,7 +72,7 @@ function addComment(){
 
 function loadComments($id){
    $conn = myConnect();
-   $sql = "SELECT comments.CommentID, comments.StudentID, students.FirstName, comments.Content, comments.Date, comments.ArticleID FROM comments INNER JOIN students on comments.StudentID = students.StudentID
+   $sql = "SELECT comments.CommentID, comments.StudentID, students.FirstName, students.LastName, comments.Content, comments.Date, comments.ArticleID FROM comments INNER JOIN students on comments.StudentID = students.StudentID
    JOIN articles on comments.ArticleID = articles.ArticleID WHERE comments.ArticleID = '$id' ORDER BY comments.Date DESC";
    $result = mysqli_query($conn, $sql);
 
