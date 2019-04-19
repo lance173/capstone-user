@@ -447,6 +447,11 @@ html, body{
     font-size: 19px;     
 }
 
+.virtualtour-line{
+  border: 1px solid #FFF; 
+  width: 45%
+}
+
 footer {
     margin-top: 100px;
     background-color: #333;
@@ -459,7 +464,7 @@ footer {
     padding-bottom: 10px;
 }
 
-.foot-sociallink-fb, .foot-sociallink-fb:active{
+.foot-sociallink-fb, .foot-sociallink-fb:active, .foot-sociallink-fb:visited {
     color: #FFF;
 }
 
@@ -467,3 +472,77 @@ footer {
     color: #02A554;
 }
 
+.btn-comment {
+    color: #fff;
+    background-color: #02A554;
+    border-color: #02A554; 
+    font-family: Roboto;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.report-link, .report-link:active, .report-link:visited {
+  color: #fc3232; 
+  font-size: 11px;
+}
+
+.report-link:hover {
+  color: #ff7700; 
+}
+
+#comment-section{
+  margin-top: 70px;
+}
+
+.comment-userphoto{
+  height: 50px;
+  width: 50px;
+  object-fit: cover;
+}
+
+.comment-username{
+  display: inline-block; 
+  padding-top: 15px;
+}
+
+.comment-date{
+  display: inline-block;
+}
+
+.comment-content{
+  display: block; padding: 25px 0px;
+}
+
+.reported-comment{
+    margin-top: 30px;
+    margin-left: 50px;
+    margin-bottom: 10px;
+    padding-left: 30px;
+    border: 2px solid #939e93;
+    width: 85%;
+  }
+
+ #reported-firstname{
+    font-weight: 600;
+    display: inline-block;
+    margin-top: 10px;
+    padding-top: 15px;
+  }
+#reported-lastname{
+  font-weight: 600;
+  display: inline-block;
+  margin-top: 10px;
+  padding-top: 15px;
+}
+
+  .reported-comment img{
+    margin-top: 10px;
+    height: 50px; 
+    width: 50px; 
+    border-radius: 100%
+  }
+
+  #reportcomment-content {
+    margin-top: 25px;
+    padding-left: 25px;
+    padding-bottom: 20px;
+  }

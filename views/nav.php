@@ -77,13 +77,16 @@
 						Hello,  <b><?php echo $_SESSION['profile']['FirstName'] ?></b>
 					</a>
 
-					<div class="dropdown-menu" aria-labelledby="navbarDropdown2">
-						<a class="dropdown-item" href="#">Edit Profile</a>
-						<a class="dropdown-item" href="../controllers/Logout.php">Logout</a>
-					</div>
+					<div class="dropdown-menu" aria-labelledby="navbarDropdown">
+		            <a class="btn btn-edtacct" role="button" data-toggle="modal" data-target="#editAccount"><i class="fa fa-user"></i> Edit Account</a>
+		            <a class="dropdown-item" href="../controllers/Logout.php"><i class="fa fa-power-off"></i> Logout </a>
+		          </div>
 				</li>
 			</ul>
 			<?php } ?> 
 		
 	</div>
 </nav>
+
+
+  <?php include('editAccount.php'); ?>

@@ -1,8 +1,16 @@
 <form action="../controllers/Article&CommentController.php" method="POST">
 <div>
-	Reason 
-	<textarea class="form-control" name="reason" rows="1" required></textarea>
+	Report User
+	<textarea class="form-control" name="reason" rows="3" required></textarea>
 </div>
+<div class="reported-comment">
+    <img id="reported-photo"> 
+    <div id="reported-firstname"></div> <div id="reported-lastname"></div>
+    <p>
+        <div id="reportcomment-content"> </div>
+    </p>
+</div> 
+
 <input type="text" name="articleID" id="articleID" >
 <input type="text" name="commentID" id="commentID"  >
 <input type="text" name="currentUser" value="<?php echo $_SESSION['profile']['FirstName'];?>" >

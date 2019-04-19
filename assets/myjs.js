@@ -47,11 +47,46 @@ function reportComment(CommentID){
 		dataType: 'json',
 		success: function (response) {
 			console.log(response.data);
+			$('#reported-photo').attr('src', '../../capstone-admin'+(response.data.offenderPhoto));
+			$('#reported-firstname').text(response.data.offenderFirstName);
+			$('#reported-lastname').text(response.data.offenderLastName);
+			$('#reportcomment-content').text(response.data.Content);
 			$('#articleID').val(response.data.ArticleID);
 			$('#commentID').val(response.data.CommentID);
-			$('#reportedUserID').val(response.data.StudentID);
+			$('#reportedUserID').val(response.data.offenderID);
 		}
 	}
 	);
 
+}
+
+function checkForm(form){
+  
+ if(form.oldPassword.value != form.oldPassConfirm.value) {
+    alert("Error: Password does not match your current password!");
+    form.newPassword.focus();
+    return false;
+  }
+
+if(form.newPassword.value != "" && form.newPassword.value == form.confirmPassword.value) {
+  if(form.newPassword.value.length < 6) {
+    alert("Error: Password must contain at least six characters!");
+    form.newPassword.focus();
+    return false;
+  }
+
+  if(form.newPassword.value == form.oldPassword.value && form.oldPassword.value != form.oldPassConfirm.value) {
+    alert("Error: Password must be different from previous password!");
+    form.newPassword.focus();
+    return false;
+  }
+
+} else {
+  alert("Error: Please check that you've entered and confirmed your password!");
+  form.newPassword.focus();
+  return false;
+}
+
+	alert("Password successfully updated!");
+	return true;
 }

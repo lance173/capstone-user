@@ -72,8 +72,8 @@ function addComment(){
 
 function loadComments($id){
    $conn = myConnect();
-   $sql = "SELECT comments.CommentID, comments.StudentID, students.FirstName, students.LastName, comments.Content, comments.Date, comments.ArticleID FROM comments INNER JOIN students on comments.StudentID = students.StudentID
-   JOIN articles on comments.ArticleID = articles.ArticleID WHERE comments.ArticleID = '$id' ORDER BY comments.Date DESC";
+   $sql = "SELECT comments.CommentID, comments.StudentID, students.FirstName, students.LastName, students.Photo, comments.Content, comments.Date, comments.ArticleID FROM comments INNER JOIN students on comments.StudentID = students.StudentID
+   JOIN articles on comments.ArticleID = articles.ArticleID WHERE comments.ArticleID = '$id' ORDER BY comments.Date ASC";
    $result = mysqli_query($conn, $sql);
 
    while($row=mysqli_fetch_array($result)){
@@ -107,7 +107,7 @@ function getReportedComment(){
 
   $conn = myConnect();
 
-  $sql = "SELECT * FROM comments WHERE CommentID = '$commentID' LIMIT 1";
+  $sql = "SELECT comments.CommentID, comments.Content, comments.Date, comments.ArticleID, offender.StudentID as offenderID, offender.FirstName as offenderFirstName, offender.LastName as offenderLastName, offender.Photo as offenderPhoto FROM comments INNER JOIN students offender on comments.StudentID = offender.StudentID WHERE CommentID = '$commentID' LIMIT 1";
 
   $result = mysqli_query($conn, $sql);
   $row = mysqli_fetch_assoc($result);

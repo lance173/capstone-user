@@ -23,7 +23,7 @@
 						<div class="virtualtour-text-bg">
 							<div class="virtualtour-text"> 
 								Josef Baumgartner - Learning Research Center <br>
-								<hr style="border: 1px solid #FFF; width: 45%"> 
+								<hr class="virtualtour-line"> 
 								Talamban Campus
 							</div>
 						</div>						
@@ -36,7 +36,7 @@
 						<div class="virtualtour-text-bg">
 							<div class="virtualtour-text"> 
 								Bonk Library <br>
-								<hr style="border: 1px solid #FFF; width: 45%"> 
+								<hr class="virtualtour-line"> 
 								Downtown Campus
 							</div>
 						</div>						
@@ -51,7 +51,7 @@
 						<div class="virtualtour-text-bg">
 							<div class="virtualtour-text"> 
 								Montessori Academy Library <br>
-								<hr style="border: 1px solid #FFF; width: 45%"> 
+								<hr class="virtualtour-line">  
 								Montessori Campus
 							</div>
 						</div>						
@@ -64,7 +64,7 @@
 						<div class="virtualtour-text-bg">
 							<div class="virtualtour-text"> 
 								Basic Education Library <br>
-								<hr style="border: 1px solid #FFF; width: 45%"> 
+								<hr class="virtualtour-line"> 
 								North Campus
 							</div>
 						</div>						
@@ -79,7 +79,7 @@
 						<div class="virtualtour-text-bg">
 							<div class="virtualtour-text"> 
 								Education Library <br>
-								<hr style="border: 1px solid #FFF; width: 45%"> 
+								<hr class="virtualtour-line">  
 								South Campus
 							</div>
 						</div>						
@@ -92,7 +92,7 @@
 						<div class="virtualtour-text-bg">
 							<div class="virtualtour-text"> 
 								Basic Education - High School Library <br>
-								<hr style="border: 1px solid #FFF; width: 45%"> 
+								<hr class="virtualtour-line"> 
 								South Campus
 							</div>
 						</div>						

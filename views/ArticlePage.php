@@ -51,51 +51,77 @@ $row = displayArticle($id);
               <textarea class="form-control" name="comment" rows="3" required></textarea>
             </div>
            
-            <button type="submit" class="btn btn-primary" name="btnSubmit">Submit</button>
+            <button type="submit" class="btn btn-comment" name="btnSubmit">Submit</button>
           </form>
         </div>
       </div>
 
+        
+
       <!-- Single Comment -->
-    <?php if(isset($comments)){
-      foreach($comments as $c){   
-    ?>
-      <div class="media mb-4">
-        <img class="d-flex mr-3 rounded-circle resize" src="../assets/img/user-3.jpg" alt="">
-        <div class="media-body">
-          <h5 class="mt-0"><?php echo $c['FirstName']; echo ' '; echo $c['LastName'];?></h5>
-          <?php echo $c['Content'];?>
-          <p>
-              
-              <input type="text" name="commentID" value="<?php echo $id;?>" hidden/>
-              <input type="text" name="commentID" value="<?php echo $c['CommentID'];?>" hidden/>
-              <input type="text" name="userID" value="<?php echo $c['FirstName'];?>" hidden/>
-              <input type="text" name="reporterID" value="<?php echo $_SESSION['profile']['FirstName'];?>" hidden/>
-              Re
-              <button class="btn btn-sm btn-default" type="submit" data-toggle="modal" data-target="#myModal" onclick="reportComment('<?php echo $c['CommentID']?>')"> Report </button>
-          </p>
-
-          <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-            <div class="modal-dialog modal-lg" role="document" style="width:100%; ">
-              <div class="modal-content" style="background-color: white;">
-                <div class="modal-header">
-                  <button type="button" class="close" data-dismiss="modal" aria-label="Close" style="color:#0000" value="X"></button>
+        <div id="comment-section">
+            <?php if(isset($comments)){
+                foreach($comments as $c){   
+            ?>
+                <div class="media mb-4">
+                    <img class="d-flex mr-3 rounded-circle comment-userphoto" src="../../capstone-admin<?php echo $c['Photo'];?>" alt="">
+                    <div class="media-body">
+                        <div class="comment-username">
+                            <h5><?php echo $c['FirstName']; echo ' '; echo $c['LastName'];?></h5> 
+                        </div>
+                        <div class="comment-date">
+                            <?php $dateCreat=date_create($c['Date']); echo ' &nbsp; &nbsp;  • &nbsp; &nbsp;'; echo date_format($dateCreat,"F d, Y"); ?>
+                        </div>
+                        
+                      <div class="comment-content">
+                          <?php echo $c['Content'];?>
+                      </div>
+                      
+                      <p>
+                          
+                          <input type="text" name="commentID" value="<?php echo $id;?>" hidden/>
+                          <input type="text" name="commentID" value="<?php echo $c['CommentID'];?>" hidden/>
+                          <input type="text" name="userID" value="<?php echo $c['FirstName'];?>" hidden/>
+                          <input type="text" name="reporterID" value="<?php echo $_SESSION['profile']['FirstName'];?>" hidden/>
+                          <a href="#" class="report-link" data-toggle="modal" data-target="#reportModal" onclick="reportComment('<?php echo $c['CommentID']?>')"><i class="fas fa-flag"></i> Report</a>
+                          <br>
+                         
+                      </p>
+                    </div>
                 </div>
-                <div class="modal-body">
-                  <?php if(!isset($_SESSION['profile'])){
-                    include 'login.php';
-                  }else{
-                    include 'report.php';
-                  }
-                  ?>
-                </div>
-              </div>
-            </div>
-          </div>
-
+            <?php }} ?> 
         </div>
-      </div>
-    <?php }} ?> 
+
+        <!-- Report Modal -->
+            <div class="modal fade" id="reportModal" tabindex="-1" role="dialog" aria-labelledby="reportModalLabel">
+                <div class="modal-dialog modal-lg" role="document" style="width:100%; ">
+                    <div class="modal-content" style="background-color: white;">
+                    <div class="modal-header">
+                        <h5 class="modal-title"></h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close" style="color:#0000" value="X"></button>
+                    </div>
+                    <div class="modal-body">
+                      <?php if(!isset($_SESSION['profile'])){ ?>
+                            <center>
+
+                                <h1> You need to Login to report this user.  </h1>
+
+                                <div style="padding: 50px 0px;">
+                                    <a href="login.php"><h4> Login now </h4></a>
+                                </div>
+                                
+                            </center>
+                            
+
+                      <?php }else{
+                        include 'report.php';
+                      }
+                      ?>
+                    </div>
+                    </div>
+                </div>
+            </div>
+        
   </div>
     
 
