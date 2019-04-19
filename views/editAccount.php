@@ -20,6 +20,7 @@
                 <div class="" style="margin-top: 20px; margin-left: 50px;">
 
                   <div class="form-group row">
+                    <input type="text" name="oldPassConfirm" value="<?php echo $_SESSION['profile']['Password'];?>" hidden>
                     <label for="inputPassword" class="col-sm-4 col-form-label">Old Password</label>
                     <div class="col-sm-8">
                       <input type="password" class="form-control" required id="inputOldPassword" placeholder="Old Password" style="width: 80%;" name="oldPassword">

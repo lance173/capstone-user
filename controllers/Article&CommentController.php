@@ -61,8 +61,8 @@ function addComment(){
       <script>
         alert('Please Login!');
         window.location = "../views/login.php";
-              </script>
-              <?php
+      </script>
+      <?php
       }
 }
  
@@ -98,7 +98,10 @@ function reportComment(){
 
       $sql = "INSERT INTO reports(ArticleID, Reason, ReportedUser, ReporterID, CommentID) VALUES ('$articleID', '$reason', '$reportedUser', '$UserID', '$reportedcomment')";
       $result = mysqli_query($conn, $sql);
-        header("Location:../views/ArticlePage.php?id=".$articleID);
+        
+        
+        header("Location: ../views/ArticlePage.php?id=".$articleID);
+             
       }
 }
 

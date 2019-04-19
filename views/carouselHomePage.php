@@ -122,7 +122,7 @@ $article =loadArticles();
 						<div id="downtowncampus-library" class="campus-sched">
 							<span class="hrsofsrvc-campus">Downtown Campus</span>
 							<div class="row">
-								<div class="col-md-6">
+								<div class="col-sm-6">
 									<div class="library-facilityandtime">
 										<span class="library-area"> American Corner </span>
 										<span class="library-area-time"> 7:30 AM - 8:00 PM </span>
@@ -136,7 +136,7 @@ $article =loadArticles();
 										<span class="library-area-time"> 8:00 AM - 8:00 PM </span>
 									</div>										
 								</div>
-								<div class="col-md-6">
+								<div class="col-sm-6">
 									<div class="library-facilityandtime">
 										<span class="library-area"> Buttenbrunch Hall </span>
 										<span class="library-area-time"> 7:30 AM - 8:00 PM MON -FR </span>
@@ -153,7 +153,7 @@ $article =loadArticles();
 						<div id="northcampus-library" class="campus-sched" style="display: none; margin-bottom: 109px;">
 							<span class="hrsofsrvc-campus">North Campus</span>
 							<div class="row">
-								<div class="col-md-6">
+								<div class="col-sm-6">
 									<div class="library-facilityandtime">
 										<span class="library-area"> Basic Education Library </span>
 										<span class="library-area-time"> 7:00 AM - 5:30 PM </span>
@@ -170,7 +170,7 @@ $article =loadArticles();
 						<div id="southcampus-library" class="campus-sched" style="display: none; margin-bottom: 109px;">
 							<span class="hrsofsrvc-campus">South Campus</span>
 							<div class="row">
-								<div class="col-md-6">
+								<div class="col-sm-6">
 									<div class="library-facilityandtime">
 										<span class="library-area"> Education Library </span>
 										<span class="library-area-time"> 7:30 AM - 6:30 PM MON -FR </span>
@@ -181,7 +181,7 @@ $article =loadArticles();
 										<span class="library-area-time"> 7:00 AM - 5:30 PM </span>
 									</div>										
 								</div>
-								<div class="col-md-6">
+								<div class="col-sm-6">
 									<div class="library-facilityandtime">
 										<span class="library-area"> Buchcik Hall </span>
 										<span class="library-area-time"> 7:30 AM - 6:30 PM MON -FR </span>
@@ -193,7 +193,7 @@ $article =loadArticles();
 						<div id="talambancampus-library" class="campus-sched" style="display: none; margin-bottom: 109px;">
 							<span class="hrsofsrvc-campus">Talamban Campus</span>
 							<div class="row">
-								<div class="col-md-6">
+								<div class="col-sm-6">
 									<div class="library-facilityandtime">
 										<span class="library-area"> Hoeppner Hall </span>
 										<span class="library-area-time"> 7:30 AM - 7:30 PM MON -FR</span>
@@ -204,7 +204,7 @@ $article =loadArticles();
 										<span class="library-area-time"> 7:30 AM - 6:00 PM </span>
 									</div>																		
 								</div>
-								<div class="col-md-6">
+								<div class="col-sm-6">
 									<div class="library-facilityandtime">
 										<span class="library-area"> Rigney Hall </span>
 										<span class="library-area-time"> 7:30 AM - 7:30 PM MON -FR </span>

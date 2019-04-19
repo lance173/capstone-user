@@ -164,7 +164,7 @@ html, body{
 }
 
 .rating > label { 
-  color: #ddd; 
+  color: #333; 
  float: right; 
 }
 
@@ -480,7 +480,7 @@ footer {
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
-.report-link, .report-link:active, .report-link:visited {
+.report-link, .report-link:active, .report-link:visited, .report-link:focus {
   color: #fc3232; 
   font-size: 11px;
 }
@@ -521,6 +521,24 @@ footer {
     width: 85%;
   }
 
+.btn-rptusr {
+    color: #fff;
+    background-color:   #ff7700;
+    border-color: #ff7700; 
+    border-radius: 3px;
+    padding: 6px 20px;
+  }
+
+  .btn-rptusr:focus, .btn-rptusr.focus, .btn-rptusr:hover, .btn-rptusr.active, .btn-rptusr:active, .btn-rptusr:disabled, .btn-rptusr.disabled 
+  {
+    color: #fff !important;
+    background-color: #fc8a25 !important;
+    border-color: #fc8a25 !important;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    background-image: none; 
+  }
+
  #reported-firstname{
     font-weight: 600;
     display: inline-block;
@@ -545,4 +563,8 @@ footer {
     margin-top: 25px;
     padding-left: 25px;
     padding-bottom: 20px;
+  }
+
+  .textarea-bg{
+    background-color: #dedee8;
   }

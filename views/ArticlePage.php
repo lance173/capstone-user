@@ -48,7 +48,7 @@ $row = displayArticle($id);
               <input type="text" name="articleID" value="<?php echo $id;?>" hidden/ >
               <input type="text" name="userID" value="<?php echo $_SESSION['profile']['StudentID'];?>" hidden/>
               <input type="text" name="studentStatus" value="<?php echo $_SESSION['profile']['Status'];?>" hidden/>
-              <textarea class="form-control" name="comment" rows="3" required></textarea>
+              <textarea class="form-control textarea-bg" name="comment" rows="3" placeholder="Comment..." required></textarea>
             </div>
            
             <button type="submit" class="btn btn-comment" name="btnSubmit">Submit</button>
@@ -77,54 +77,18 @@ $row = displayArticle($id);
                           <?php echo $c['Content'];?>
                       </div>
                       
-                      <p>
-                          
-                          <input type="text" name="commentID" value="<?php echo $id;?>" hidden/>
-                          <input type="text" name="commentID" value="<?php echo $c['CommentID'];?>" hidden/>
-                          <input type="text" name="userID" value="<?php echo $c['FirstName'];?>" hidden/>
-                          <input type="text" name="reporterID" value="<?php echo $_SESSION['profile']['FirstName'];?>" hidden/>
+                      <p>                          
                           <a href="#" class="report-link" data-toggle="modal" data-target="#reportModal" onclick="reportComment('<?php echo $c['CommentID']?>')"><i class="fas fa-flag"></i> Report</a>
-                          <br>
-                         
+                          <br>                         
                       </p>
                     </div>
                 </div>
             <?php }} ?> 
-        </div>
-
-        <!-- Report Modal -->
-            <div class="modal fade" id="reportModal" tabindex="-1" role="dialog" aria-labelledby="reportModalLabel">
-                <div class="modal-dialog modal-lg" role="document" style="width:100%; ">
-                    <div class="modal-content" style="background-color: white;">
-                    <div class="modal-header">
-                        <h5 class="modal-title"></h5>
-                        <button type="button" class="close" data-dismiss="modal" aria-label="Close" style="color:#0000" value="X"></button>
-                    </div>
-                    <div class="modal-body">
-                      <?php if(!isset($_SESSION['profile'])){ ?>
-                            <center>
-
-                                <h1> You need to Login to report this user.  </h1>
-
-                                <div style="padding: 50px 0px;">
-                                    <a href="login.php"><h4> Login now </h4></a>
-                                </div>
-                                
-                            </center>
-                            
-
-                      <?php }else{
-                        include 'report.php';
-                      }
-                      ?>
-                    </div>
-                    </div>
-                </div>
-            </div>
-        
-  </div>
+        </div>                                 
+    </div>
     
-
+    <!-- Report Modal -->
+    <?php include 'report.php'; ?> 
 
       <!-- Comment with nested comments -->
 

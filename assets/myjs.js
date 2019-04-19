@@ -90,3 +90,15 @@ if(form.newPassword.value != "" && form.newPassword.value == form.confirmPasswor
 	alert("Password successfully updated!");
 	return true;
 }
+
+function submitReport(form) {
+
+	if(form.currentUser.value == form.reportedUser.value){
+		alert("You cannot report your own comment.");
+		return false;
+	}
+	else {
+		alert("Report sucessfully submitted!");
+		return true;
+	}
+}
