@@ -1,5 +1,11 @@
 <?php 
 	require('../controllers/SliderController.php'); 
+	require('../controllers/rating360.php'); 
+	require('../controllers/Article&CommentController.php');
+
+	$article =loadArticles();
+
+    $ratings = loadRatingsOnHome();
 
 	$visitor = visitCounter();
 	$slide = loadSliderItems();
@@ -56,12 +62,6 @@
 	</center>	
 </div>
 
-
-<?php require('../controllers/Article&CommentController.php');
-
-$article =loadArticles();
-
-?>
 <div class="body-container">
 	<div class="container">
 		<div style="margin-bottom: 50px;">
@@ -243,6 +243,84 @@ $article =loadArticles();
 				</div>				
 			</div>			
 		</div>
+	</div>
+
+	<div class="container" id="rating-section">
+	
+		<div class="row">
+			<div class="col-md-12">
+				<div class="home-titles1" style="display: inline-block;"> <h1> Ratings </h1>  </div> &nbsp; <div style="display: inline-block;"> <h5> •  &nbsp; Our students review on the Virtual Tour </h5>  </div> <br>
+				<hr class="orangelines1" style="width: 50%;" >
+			</div>
+		</div>
+
+		
+		<div class="row" >
+			<?php if(isset($ratings)){
+	        foreach($ratings as $r){   
+	    	?>
+				<div class="col-md-6" style="margin-top: 50px;">
+					<div class="media mb-4">
+		                <img class="d-flex mr-3 rounded-circle rating-userphoto" src="../../capstone-admin<?php echo $r['Photo'];?>" alt="">
+		                <div class="media-body">
+		                    <div class="rating-username">
+		                        <h5><?php echo $r['FirstName']; echo ' '; echo $r['LastName'];?></h5> 
+		                    </div>
+		                    <div class="rating-stars">
+		                         <?php if($r['Stars'] == 1){?>
+	                                <span class="fa fa-star star-checked"></span>
+	                                <span class="fa fa-star"></span>
+	                                <span class="fa fa-star"></span>
+	                                <span class="fa fa-star"></span>
+	                                <span class="fa fa-star"></span>
+	                            
+	                            <?php }else if($r['Stars'] == 2){?>
+	                                <span class="fa fa-star star-checked"></span>
+	                                <span class="fa fa-star star-checked"></span>
+	                                <span class="fa fa-star"></span>
+	                                <span class="fa fa-star"></span>
+	                                <span class="fa fa-star"></span>
+	                            
+	                            <?php }else if($r['Stars'] == 3){?>
+	                                <span class="fa fa-star star-checked"></span>
+	                                <span class="fa fa-star star-checked"></span>
+	                                <span class="fa fa-star star-checked"></span>
+	                                <span class="fa fa-star"></span>
+	                                <span class="fa fa-star"></span>
+	                        
+	                            <?php }else if($r['Stars'] == 4){?>
+	                                <span class="fa fa-star star-checked"></span>
+	                                <span class="fa fa-star star-checked"></span>
+	                                <span class="fa fa-star star-checked"></span>
+	                                <span class="fa fa-star star-checked"></span>
+	                                <span class="fa fa-star"></span>
+
+	                            <?php }else if($r['Stars'] == 5){?>
+	                                <span class="fa fa-star star-checked"></span>
+	                                <span class="fa fa-star star-checked"></span>
+	                                <span class="fa fa-star star-checked"></span>
+	                                <span class="fa fa-star star-checked"></span>
+	                                <span class="fa fa-star star-checked"></span>
+	                            <?php }?>
+		                    </div>
+		                    
+		                  <div class="rating-feedback">
+		                      <?php echo $r['Feedback'];?>
+		                  </div>                      
+		                  
+		                </div>
+		            </div>
+				</div>
+			<?php }} ?>
+		</div>
+	</div>
+
+	<div style="text-align: center;">	
+		<a href="startvirtualtour.php#rating-section">
+			<button class="btn btn-readmorerating"> 
+	 			Read More	
+			</button>
+		</a>		
 	</div>
 
 <br>

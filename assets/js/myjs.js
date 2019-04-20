@@ -153,6 +153,26 @@ function submitRating(form, isLoggedIn, accountStatus){
 		alert("Thank you for your feedback!");
 		return true;
 	}
+}
 
+function submitComment(form, isLoggedIn, accountStatus){
 
+	
+	if (isLoggedIn == 'false'){
+		alert("You need Login to comment");
+		return false;
+	}
+	else if (accountStatus == 'BLOCKED'){
+		alert("Your Account Status is Blocked!");
+		return false;
+	}
+	else {
+		return true;
+	}
+
+}
+
+function logoutPopup(){
+	alert("Signing out");
+	window.location='../controllers/Logout.php';
 }

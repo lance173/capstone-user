@@ -10,7 +10,13 @@ $id = $_GET['id'];
 $comments = loadComments($id);
 $row = displayArticle($id);
       
-    
+  if(isset($_SESSION['profile'])){
+      $isLoggedIn = "true";
+      $status = $_SESSION['profile']['Status']; 
+  } else {
+      $isLoggedIn = "false";
+      $status = 'none'; 
+}    
 
 ?>
 
@@ -43,7 +49,7 @@ $row = displayArticle($id);
         <h5 class="card-header">Leave a Comment:</h5>
         <div class="card-body">
             
-          <form action="../controllers/Article&CommentController.php" method="POST">
+          <form action="../controllers/Article&CommentController.php" method="POST" onsubmit="return submitComment(this, '<?php echo $isLoggedIn; ?>', '<?php echo $status; ?>');">
             <div class="form-group">
               <input type="text" name="articleID" value="<?php echo $id;?>" hidden/ >
               <input type="text" name="userID" value="<?php echo $_SESSION['profile']['StudentID'];?>" hidden/>

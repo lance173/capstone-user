@@ -43,7 +43,19 @@ function virtualTourRating(){
 
 function loadRatings(){
 	 $conn = myConnect();
-	 $sql = "SELECT ratings.ratingID, ratings.StudentID, students.FirstName, ratings.Comment, ratings.stars FROM ratings INNER JOIN students on ratings.StudentID = students.StudentID ORDER BY ratingID DESC";
+	 $sql = "SELECT ratings.ratingID, ratings.StudentID, students.FirstName, students.LastName, students.Photo, ratings.Feedback, ratings.Stars FROM ratings INNER JOIN students on ratings.StudentID = students.StudentID ORDER BY Stars DESC";
+	 $result = mysqli_query($conn, $sql);
+
+	 while($row=mysqli_fetch_array($result)){
+			//do something as long as there's a remaining row.
+			$rows[] = $row;
+	 }
+	 return (isset($rows)) ? $rows : NULL; 
+} 
+
+function loadRatingsOnHome(){
+	 $conn = myConnect();
+	 $sql = "SELECT ratings.ratingID, ratings.StudentID, students.FirstName, students.LastName, students.Photo, ratings.Feedback, ratings.Stars FROM ratings INNER JOIN students on ratings.StudentID = students.StudentID ORDER BY Stars DESC LIMIT 4";
 	 $result = mysqli_query($conn, $sql);
 
 	 while($row=mysqli_fetch_array($result)){

@@ -569,3 +569,60 @@ footer {
   .textarea-bg{
     background-color: #dedee8;
   }
+
+  .btn-ratenow {
+    color: #fff;
+    background-color:   #ff7700;
+    border-color: #ff7700; 
+    border-radius: 3px;
+    padding: 20px 50px;
+    font-size: 23px;
+  }
+
+  .btn-ratenow:focus, .btn-ratenow.focus, .btn-ratenow:hover, .btn-ratenow.active, .btn-ratenow:active, .btn-ratenow:disabled, .btn-ratenow.disabled 
+  {
+    font-size: 27px;
+    box-shadow: none; 
+  }
+
+  .btn-readmorerating {
+    color: #fff;
+    background-color:   #ff7700;
+    border: 3px solid #ff7700; 
+    border-radius: 3px;
+    padding: 15px 200px;
+    font-size: 23px;
+  }
+
+  .btn-readmorerating:focus, .btn-readmorerating.focus, .btn-readmorerating:hover, .btn-readmorerating.active, .btn-readmorerating:active, .btn-readmorerating:disabled, .btn-ratenow.disabled 
+  {
+    color: #333;
+    background-color: #fff;
+    font-size: 27px;
+    box-shadow: none; 
+  }
+
+#rating-section{
+    margin-top: 70px;
+}
+
+.rating-userphoto{
+  height: 80px;
+  width: 80px;
+  object-fit: cover;
+}
+
+.rating-username{
+  display: inline-block; 
+  padding-top: 15px;
+}
+
+.rating-stars{
+  padding-left: 30px;
+  font-size: 25px;  
+  display: inline-block;
+}
+
+.rating-feedback{
+  display: block; padding: 25px 0px;
+}

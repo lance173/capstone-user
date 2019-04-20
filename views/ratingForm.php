@@ -17,7 +17,6 @@
                             $status = 'none'; 
                         }
                     ?>
-
             </div>
             <form action="../controllers/Rating360.php" method="POST" onsubmit="return submitRating(this, '<?php echo $isLoggedIn; ?>', '<?php echo $status; ?>');"> 
                 <div class="modal-body">                
@@ -39,7 +38,7 @@
                         </div>    
                 </div>
                 <div class="modal-footer">
-                    <button type="submit" class="btn btn-comment" name="btnSubmit">Submit</button>
+                    <button type="submit" class="btn btn-rptusr" name="btnSubmit">Submit</button>
                     <button type="button" class="btn btn-secondary" data-dismiss="modal">Later</button>                    
                 </div>
             </form>

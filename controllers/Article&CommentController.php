@@ -43,7 +43,7 @@ function addComment(){
       if($comment_Status != 'BLOCKED'){
         $sql = "INSERT INTO comments(Content, StudentID, ArticleID) VALUES ('$comment_content', '$comment_UserID','$comment_articleID')";
         $result = mysqli_query($conn, $sql);
-        header("Location:../views/ArticlePage.php?id=".$comment_articleID);
+        header("Location:../views/ArticlePage.php?id=".$comment_articleID."#comment-section");
       }else{
         ?>
         <script>
