@@ -1,3 +1,35 @@
+
+// Hours of Service 
+
+function showdowntownhours() {	
+	document.getElementById("downtowncampus-library").style.display = 'block';		
+	document.getElementById("northcampus-library").style.display = "none";	
+	document.getElementById("southcampus-library").style.display = "none";
+	document.getElementById("talambancampus-library").style.display = "none";
+}
+
+function shownorthhours() {
+	document.getElementById("northcampus-library").style.display = "block";
+	document.getElementById("downtowncampus-library").style.display = "none";	
+	document.getElementById("southcampus-library").style.display = "none";
+	document.getElementById("talambancampus-library").style.display = "none";
+}
+
+function showsouthhours() {
+	document.getElementById("southcampus-library").style.display = "block";
+	document.getElementById("northcampus-library").style.display = "none";
+	document.getElementById("downtowncampus-library").style.display = "none";	
+	document.getElementById("talambancampus-library").style.display = "none";
+}
+
+function showtalambanhours() {
+	document.getElementById("talambancampus-library").style.display = "block";
+	document.getElementById("northcampus-library").style.display = "none";
+	document.getElementById("downtowncampus-library").style.display = "none";	
+	document.getElementById("southcampus-library").style.display = "none";
+	
+}
+
 $(document).ready(function() {
 	var showChar = 100;
 	var ellipsestext = "...";
@@ -101,4 +133,26 @@ function submitReport(form) {
 		alert("Report sucessfully submitted!");
 		return true;
 	}
+}
+
+function submitRating(form, isLoggedIn, accountStatus){
+
+	if(form.starrating.value == 0){
+		alert("Input number of stars");
+		return false;
+	}
+	else if (isLoggedIn == 'false'){
+		alert("Login first to submit rating!");
+		return false;
+	}
+	else if (accountStatus == 'BLOCKED'){
+		alert("Your Account Status is Blocked!");
+		return false;
+	}
+	else {
+		alert("Thank you for your feedback!");
+		return true;
+	}
+
+
 }

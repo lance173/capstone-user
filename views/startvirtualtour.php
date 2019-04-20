@@ -102,10 +102,16 @@
 		</div>
 	</div>	
 </div>
+
+<?php include('ratingForm.php'); ?>
+
 <div class="container" style="margin-top: 100px;">
 	<div class="row">
-		<div class="col-md-12">
+		
+	</div>
 
+	<div class="row">
+		<div class="col-md-12">
 			<div class="home-titles1" style="display: inline-block;"> <h1> Ratings </h1>  </div> &nbsp; <div style="display: inline-block;"> <h5> •  &nbsp; Our students review on the Virtual Tour </h5>  </div> <br>
 			<hr class="orangelines1" style="width: 50%;" >
 		</div>
@@ -113,49 +119,7 @@
 </div>
 
 
-<!--Rating Modal-->
-<div class="modal fade" id="rateModal" tabindex="-1" role="dialog" aria-labelledby="rateModalLabel" aria-hidden="true">
-  <div class="modal-dialog" role="document">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="rateModalLabel">Rate the Virtual Tour</h5>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true"> &times; </span>
-        </button>
-      </div>
-      <div class="modal-body">
-        <form action="../controllers/Rating360.php" method="POST">
-			<div id="wrap">
-				<div id="main" class="container clear-top">
 
-					<center>
-					<fieldset name="set1" class="rating">
-
-					    <input type="radio" id="field1_star5" name="rating1" value="5" /><label class = "full" for="field1_star5" title="Excellent - 5 stars"></label></label>
-
-					    <input type="radio" id="field1_star4" name="rating1" value="4" /><label class = "full" for="field1_star4" title="Very Good - 4 stars"></label>
-
-					    <input type="radio" id="field1_star3" name="rating1" value="3" /><label class = "full" for="field1_star3" title="Good - 3 stars"></label>
-
-					    <input type="radio" id="field1_star2" name="rating1" value="2" /><label class = "full" for="field1_star2" title="Poor- 2 stars"></label>
-
-					    <input type="radio" id="field1_star1" name="rating1" value="1" /><label class = "full" for="field1_star1" title="Needs Improvement - 1 star"></label>
-
-					</fieldset>
-					</center>
-					
-				</div>
-			  <textarea class="form-control" name="comment" rows="3" required></textarea>
-			</div>			
-		</form>
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-dismiss="modal">Later</button>
-        <button type="submit" class="btn btn-primary" name="btnSubmit">Submit</button>
-      </div>
-    </div>
-  </div>
-</div>
 
 
 
