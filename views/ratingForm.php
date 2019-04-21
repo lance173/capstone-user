@@ -1,5 +1,10 @@
 <!--Rating Modal-->
 
+<?php                             
+    $status = $_SESSION['profile']['Status']; 
+    $isRated = IsRated();
+?>
+
 <?php if(!isset($_SESSION['profile'])){ ?>
     <div class="modal fade" id="rateModal" tabindex="-1" role="dialog" aria-labelledby="rateModalLabel">
         <div class="modal-dialog modal-lg" role="document" style="width:100%; ">
@@ -20,7 +25,24 @@
                 </div>
             </div>
         </div>
-    </div>   
+    </div>
+<?php }else if($isRated == 'true'){ ?>
+    <div class="modal fade" id="rateModal" tabindex="-1" role="dialog" aria-labelledby="rateModalLabel">
+        <div class="modal-dialog modal-lg" role="document" style="width:100%; ">
+            <div class="modal-content" style="background-color: white;">
+                <div class="modal-header">
+                    <h5 class="modal-title"></h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close" style="color:#0000" value="X"></button>
+                </div>
+                <div class="modal-body" style="padding: 100px;">
+                    <center>
+                        <h1> You have already done rating.  </h1>    
+                    </center>
+                </div>
+            </div>
+        </div>
+    </div> 
+
 <?php }else{ ?>
     <div class="modal fade" id="rateModal" tabindex="-1" role="dialog" aria-labelledby="rateModalLabel" aria-hidden="true">
         <div class="modal-dialog" role="document">
@@ -29,12 +51,7 @@
                     <h5 class="modal-title" id="rateModalLabel">Rate the Virtual Tour</h5>
                         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                             <span aria-hidden="true"> &times; </span>
-                        </button>
-
-                        <?php                             
-                            $status = $_SESSION['profile']['Status']; 
-                            $isRated = IsRated();
-                        ?>
+                        </button>                        
                 </div>
                 <form action="../controllers/Rating360.php" method="POST" onsubmit="return submitRating(this, '<?php echo $status; ?>', '<?php echo $isRated; ?>');"> 
                     <div class="modal-body">                
