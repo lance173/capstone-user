@@ -12,12 +12,13 @@ $row = displayArticle($id);
       
   if(isset($_SESSION['profile'])){
       $isLoggedIn = "true";
-      $status = $_SESSION['profile']['Status']; 
+      if(isset($_SESSION['profile']['Status'])){
+        $status = $_SESSION['profile']['Status']; 
+      }
   } else {
       $isLoggedIn = "false";
       $status = 'none'; 
-}    
-
+  }   
 ?>
 
 <!-- Page Content -->

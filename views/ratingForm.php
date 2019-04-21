@@ -1,8 +1,12 @@
 <!--Rating Modal-->
 
-<?php                             
-    $status = $_SESSION['profile']['Status']; 
-    $isRated = IsRated();
+<?php
+    if(isset($_SESSION['profile']['Status'])){
+        $status = $_SESSION['profile']['Status']; 
+        $isRated = IsRated();
+    } else {
+        $isRated = 'true';
+    }                             
 ?>
 
 <?php if(!isset($_SESSION['profile'])){ ?>
