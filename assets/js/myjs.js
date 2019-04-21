@@ -123,40 +123,7 @@ if(form.newPassword.value != "" && form.newPassword.value == form.confirmPasswor
 	return true;
 }
 
-function submitReport(form) {
-
-	if(form.currentUser.value == form.reportedUser.value){
-		alert("You cannot report your own comment.");
-		return false;
-	}
-	else {
-		alert("Report sucessfully submitted!");
-		return true;
-	}
-}
-
-function submitRating(form, isLoggedIn, accountStatus){
-
-	if(form.starrating.value == 0){
-		alert("Input number of stars");
-		return false;
-	}
-	else if (isLoggedIn == 'false'){
-		alert("Login first to submit rating!");
-		return false;
-	}
-	else if (accountStatus == 'BLOCKED'){
-		alert("Your Account Status is Blocked!");
-		return false;
-	}
-	else {
-		alert("Thank you for your feedback!");
-		return true;
-	}
-}
-
 function submitComment(form, isLoggedIn, accountStatus){
-
 	
 	if (isLoggedIn == 'false'){
 		alert("You need Login to comment");
@@ -169,8 +136,40 @@ function submitComment(form, isLoggedIn, accountStatus){
 	else {
 		return true;
 	}
-
 }
+
+function submitReport(form) {
+
+	if(form.currentUser.value == form.reportedUser.value){
+		alert("You cannot report your own comment.");
+		return false;
+	}
+	else {
+		alert("Report sucessfully submitted!");
+		return true;
+	}
+}
+
+function submitRating(form, accountStatus, isRated){
+
+	if(form.starrating.value == 0){
+		alert("Input number of stars");
+		return false;
+	}
+	else if (accountStatus == 'BLOCKED'){
+		alert("Your Account Status is Blocked!");
+		return false;
+	}
+	else if (isRated == 'true'){
+		alert("You cannot rate more than once!");
+		return false;
+	}
+	else {
+		alert("Thank you for your feedback!");
+		return true;
+	}
+}
+
 
 function logoutPopup(){
 	alert("Signing out");
