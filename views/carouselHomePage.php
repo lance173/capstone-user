@@ -71,7 +71,7 @@
 		<div class="row featured-row">
 			<div style="border:1px ;width:1200px;height:100%;overflow-y:hidden;overflow-x:hidden;">
 				<div class="row mb-2">
-					<?php foreach($article as $a){   ?>
+					<?php if(isset($article)){foreach($article as $a){   ?>
 						<div class="col-md-6">
 							<div class="row no-gutters border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
 								<div class="col p-4 d-flex flex-column position-static">
@@ -93,7 +93,7 @@
 								</div>
 							</div>
 						</div>
-    				<?php } ?>    				
+    				<?php }} ?>    				
   				</div>
 			</div>
 		</div>

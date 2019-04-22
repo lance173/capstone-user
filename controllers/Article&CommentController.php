@@ -14,7 +14,7 @@ function displayArticle($id){
    articles INNER JOIN admins on articles.AdminID = admins.AdminID WHERE ArticleID = '$id' LIMIT 1 ";
       $result = mysqli_query($conn, $sql) or die("error");
       $row = mysqli_fetch_assoc($result);
-      return $row;
+      return (isset($row)) ? $row : NULL; 
 
 }
 
@@ -27,7 +27,7 @@ function loadArticles(){
       //do something as long as there's a remaining row.
       $rows[] = $row;
    }
-   return $rows;  
+   return (isset($rows)) ? $rows : NULL;    
 }
 
 
