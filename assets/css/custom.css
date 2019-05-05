@@ -473,12 +473,31 @@ footer {
     padding-bottom: 10px;
 }
 
+.foot-title2{
+    padding-top: 25px;
+}
+
+.foot-sub-title{
+  padding-bottom: 15px; 
+  font-size: 10px; 
+  display: inline-block;
+}
+
+
 .foot-sociallink-fb, .foot-sociallink-fb:active, .foot-sociallink-fb:visited {
     color: #FFF;
 }
 
 .foot-sociallink-fb:hover {
     color: #02A554;
+}
+
+.foot-aboutuslink, .foot-aboutuslink:active, .foot-aboutuslink:visited {
+    color: #FFF;
+}
+
+.foot-aboutuslink:hover {
+    color: #5b5bef;
 }
 
 .btn-comment {
